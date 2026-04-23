@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samantha Patrício | Analista de RH & DP</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-pale: #F7EDD6;
+  --dark: #1A1612;
+  --dark-2: #2C2620;
+  --dark-3: #3D3530;
+  --mid: #6B5F56;
+  --light: #F5F0E8;
+  --white: #FDFAF4;
+  --accent: #8B4513;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--dark);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 4rem;
+  background: rgba(26,22,18,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; letter-spacing: 0.15em;
+  color: var(--gold);
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(253,250,244,0.6);
+  text-decoration: none; transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 6rem 4rem 4rem;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 50%; height: 100%;
+  background: linear-gradient(135deg, var(--dark-2) 0%, var(--dark-3) 100%);
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.hero-text { position: relative; z-index: 2; }
+.hero-eyebrow {
+  font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before {
+  content: ''; width: 2.5rem; height: 1px; background: var(--gold);
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 300; line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+.hero-name span { font-style: italic; color: var(--gold-light); }
+.hero-title {
+  font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(253,250,244,0.5); margin-bottom: 2.5rem;
+}
+.hero-desc {
+  font-size: 1rem; line-height: 1.8;
+  color: rgba(253,250,244,0.75);
+  max-width: 480px; margin-bottom: 3rem;
+}
+.hero-cta {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.btn-primary {
+  padding: 0.9rem 2rem;
+  background: var(--gold); color: var(--dark);
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  border: none; cursor: pointer; text-decoration: none;
+  font-weight: 500; transition: all 0.3s;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline {
+  padding: 0.9rem 2rem;
+  background: transparent; color: var(--gold);
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  border: 1px solid rgba(201,168,76,0.4); cursor: pointer; text-decoration: none;
+  font-weight: 400; transition: all 0.3s;
+}
+.btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+
+.hero-image {
+  position: relative; z-index: 2;
+  display: flex; justify-content: center; align-items: center;
+}
+.hero-photo-frame {
+  position: relative; width: 380px; height: 460px;
+}
+.hero-photo-frame::before {
+  content: '';
+  position: absolute; top: -1.5rem; right: -1.5rem;
+  width: 100%; height: 100%;
+  border: 1px solid rgba(201,168,76,0.35);
+}
+.hero-photo-frame img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top;
+  filter: sepia(10%) contrast(1.05);
+}
+.hero-stats {
+  position: absolute; bottom: -1.5rem; left: -1.5rem;
+  background: var(--dark); border: 1px solid rgba(201,168,76,0.3);
+  padding: 1.2rem 1.8rem;
+  display: flex; gap: 2rem;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: var(--gold);
+  display: block;
+}
+.stat-label {
+  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(253,250,244,0.45);
+}
+
+/* ABOUT / VAGA SECTION */
+.vaga-section {
+  padding: 6rem 4rem;
+  background: var(--dark-2);
+  position: relative;
+}
+.vaga-section::before {
+  content: '';
+  position: absolute; top: 0; left: 4rem; right: 4rem; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.section-label {
+  font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300;
+  line-height: 1.2; margin-bottom: 3rem;
+}
+
+.fit-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.fit-card {
+  padding: 1.8rem;
+  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(201,168,76,0.04);
+  position: relative; overflow: hidden;
+  transition: all 0.3s;
+}
+.fit-card:hover {
+  border-color: rgba(201,168,76,0.4);
+  background: rgba(201,168,76,0.08);
+}
+.fit-card::before {
+  content: attr(data-icon);
+  position: absolute; right: 1.5rem; top: 1rem;
+  font-size: 2rem; opacity: 0.1;
+}
+.fit-card-req {
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.5rem;
+}
+.fit-card-title {
+  font-size: 0.95rem; font-weight: 500;
+  margin-bottom: 0.8rem; line-height: 1.4;
+}
+.fit-card-answer {
+  font-size: 0.85rem; line-height: 1.7;
+  color: rgba(253,250,244,0.65);
+}
+.fit-check {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-top: 0.8rem; font-size: 0.78rem; color: var(--gold);
+}
+.fit-check::before { content: '✓'; font-weight: 700; }
+
+/* COMPETÊNCIAS */
+.skills-section {
+  padding: 6rem 4rem;
+  background: var(--dark);
+}
+.skills-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.skill-block {
+  padding: 2.5rem;
+  border: 1px solid rgba(201,168,76,0.1);
+  transition: background 0.3s;
+}
+.skill-block:hover { background: rgba(201,168,76,0.04); }
+.skill-icon {
+  width: 2.5rem; height: 2.5rem;
+  border: 1px solid rgba(201,168,76,0.4);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+.skill-block-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 400; margin-bottom: 1rem;
+  color: var(--gold-light);
+}
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag {
+  font-size: 0.72rem; letter-spacing: 0.08em;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(201,168,76,0.25);
+  color: rgba(253,250,244,0.6);
+}
+.tag.highlight {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* EXPERIÊNCIA */
+.exp-section {
+  padding: 6rem 4rem;
+  background: var(--dark-2);
+}
+.timeline { position: relative; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 11rem; top: 0; bottom: 0;
+  width: 1px; background: rgba(201,168,76,0.2);
+}
+.exp-item {
+  display: grid; grid-template-columns: 11rem 1fr;
+  gap: 3rem; margin-bottom: 3.5rem;
+  position: relative;
+}
+.exp-item::after {
+  content: '';
+  position: absolute; left: 11rem; top: 0.5rem;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gold); transform: translateX(-50%);
+}
+.exp-date {
+  text-align: right;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: var(--gold); padding-top: 0.2rem;
+}
+.exp-current {
+  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(201,168,76,0.6); display: block; margin-top: 0.3rem;
+}
+.exp-content { padding-left: 2rem; }
+.exp-company {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 400; color: var(--gold-light);
+  margin-bottom: 0.2rem;
+}
+.exp-role {
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(253,250,244,0.45); margin-bottom: 1rem;
+}
+.exp-desc {
+  font-size: 0.88rem; line-height: 1.8;
+  color: rgba(253,250,244,0.7);
+}
+.exp-highlights {
+  margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+.exp-highlight {
+  font-size: 0.72rem; padding: 0.25rem 0.7rem;
+  background: rgba(201,168,76,0.1); color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+/* CURSOS / CERTIFICAÇÕES */
+.certs-section {
+  padding: 6rem 4rem;
+  background: var(--dark);
+}
+.certs-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem; margin-top: 1rem;
+}
+.cert-card {
+  padding: 1.4rem 1.6rem;
+  border: 1px solid rgba(201,168,76,0.12);
+  background: rgba(201,168,76,0.03);
+  position: relative; overflow: hidden; transition: all 0.3s;
+}
+.cert-card:hover {
+  border-color: rgba(201,168,76,0.35);
+  background: rgba(201,168,76,0.07);
+  transform: translateY(-3px);
+}
+.cert-inst {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.5rem;
+}
+.cert-name {
+  font-size: 0.85rem; line-height: 1.4; font-weight: 400;
+  color: rgba(253,250,244,0.85);
+}
+.cert-year {
+  font-size: 0.72rem; color: rgba(253,250,244,0.35);
+  margin-top: 0.6rem; letter-spacing: 0.08em;
+}
+.cert-badge {
+  position: absolute; top: 0.8rem; right: 0.8rem;
+  font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  background: rgba(201,168,76,0.15); color: var(--gold);
+}
+
+/* DIFERENCIAL */
+.diff-section {
+  padding: 6rem 4rem;
+  background: linear-gradient(135deg, var(--dark-2) 0%, var(--dark-3) 100%);
+  position: relative; overflow: hidden;
+}
+.diff-section::after {
+  content: 'SAMANTHA';
+  position: absolute; right: -2rem; top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 8rem; font-weight: 600; letter-spacing: 0.3em;
+  color: rgba(201,168,76,0.05);
+  white-space: nowrap; pointer-events: none;
+}
+.diff-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+  margin-top: 2rem;
+}
+.diff-item {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+}
+.diff-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem; font-weight: 300; color: rgba(201,168,76,0.25);
+  line-height: 1; flex-shrink: 0; width: 3rem;
+}
+.diff-content {}
+.diff-title {
+  font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem;
+  color: var(--gold-light);
+}
+.diff-text {
+  font-size: 0.85rem; line-height: 1.7;
+  color: rgba(253,250,244,0.6);
+}
+
+/* CONTACT */
+.contact-section {
+  padding: 5rem 4rem;
+  background: var(--dark);
+  text-align: center;
+  border-top: 1px solid rgba(201,168,76,0.15);
+}
+.contact-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.contact-title em { font-style: italic; color: var(--gold); }
+.contact-links {
+  display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+.contact-link {
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  text-decoration: none; transition: transform 0.3s;
+}
+.contact-link:hover { transform: translateY(-4px); }
+.contact-link-label {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold);
+}
+.contact-link-val {
+  font-size: 0.9rem; color: rgba(253,250,244,0.7);
+}
+
+footer {
+  background: var(--dark-2); text-align: center;
+  padding: 1.5rem;
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(253,250,244,0.25);
+  border-top: 1px solid rgba(201,168,76,0.08);
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.hero-text { animation: fadeIn 1s ease 0.3s both; }
+.hero-image { animation: fadeIn 1s ease 0.6s both; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; text-align: center; }
+  .hero::before { display: none; }
+  .hero-eyebrow { justify-content: center; }
+  .hero-desc { margin: 0 auto 2rem; }
+  .hero-cta { justify-content: center; }
+  .hero-image { display: none; }
+  .vaga-section, .skills-section, .exp-section, .certs-section, .diff-section, .contact-section {
+    padding: 4rem 1.5rem;
+  }
+  .fit-grid, .skills-grid, .diff-grid { grid-template-columns: 1fr; }
+  .skills-grid { gap: 0; }
+  .timeline::before { left: 0; }
+  .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .exp-item::after { display: none; }
+  .exp-date { text-align: left; }
+  .exp-content { padding-left: 0; }
+  .contact-links { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><img src="data:image/png;base64,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" style="height:32px;vertical-align:middle;margin-right:8px;"> Samantha Patrício</div>
+  <ul class="nav-links">
+    <li><a href="#vaga">A Vaga</a></li>
+    <li><a href="#competencias">Competências</a></li>
+    <li><a href="#experiencia">Experiência</a></li>
+    <li><a href="#certificacoes">Formação</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Candidatura Interna · MBRF</div>
+    <h1 class="hero-name">
+      Samantha<br><span>Patrício</span>
+    </h1>
+    <p class="hero-title">Analista de RH Júnior → candidatura interna Pleno</p>
+    <p class="hero-desc">
+      Profissional com 9 anos em Recursos Humanos e Departamento Pessoal, atuando hoje na MBRF como Analista de RH Júnior. Perfil analítico com domínio de eSocial, folha de pagamento, benefícios e legislação trabalhista.
+    </p>
+    <div class="hero-cta">
+      <a href="#vaga" class="btn-primary">Ver aderência à vaga</a>
+      <a href="#experiencia" class="btn-outline">Trajetória completa</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-photo-frame">
+      <img src="https://media.licdn.com/dms/image/v2/D4D03AQEimfDKTUvn3w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1729459337284?e=2147483647&v=beta&t=xxxx" 
+           alt="Samantha Patrício"
+           onerror="this.parentElement.style.background='#3D3530'; this.style.display='none'; this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-family:Cormorant Garamond,serif;font-size:5rem;color:rgba(201,168,76,0.3)\'>SP</div>'">
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">9</span>
+          <span class="stat-label">Anos em RH</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Unidades geridas</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">30+</span>
+          <span class="stat-label">Certificações</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADERÊNCIA À VAGA -->
+<section class="vaga-section" id="vaga">
+  <div class="reveal">
+    <p class="section-label">Análise de aderência</p>
+    <h2 class="section-title">Por que sou a escolha certa<br>para a vaga de Folha Pleno</h2>
+  </div>
+  <div class="fit-grid reveal">
+    <div class="fit-card" data-icon="📋">
+      <p class="fit-card-req">Requisito da vaga</p>
+      <p class="fit-card-title">Processos de média/alta complexidade e melhoria contínua</p>
+      <p class="fit-card-answer">Na MBRF, realizo conferências de benefícios, conciliações mensais e de folha e análises via Excel. Na Michelson, estruturei do zero o RH em 4 unidades — incluindo abertura de filial: contratação, sindicato, CNPJ e toda a estruturação legal para funcionamento da unidade.</p>
+      <span class="fit-check">Aderência total</span>
+    </div>
+    <div class="fit-card" data-icon="💻">
+      <p class="fit-card-req">Desejável SAP (RH, Folha, Tempo)</p>
+      <p class="fit-card-answer">Certificada no Curso Completo SAP (HCM, SD, MM, FI, ABAP, S/4HANA) com acesso vitalício ao servidor. Na MBRF utilizo TOTVS Protheus e Rhevolution nas rotinas diárias de benefícios e conciliações.</p>
+      <span class="fit-check">Diferencial confirmado</span>
+    </div>
+    <div class="fit-card" data-icon="⚖️">
+      <p class="fit-card-req">Legislação trabalhista e previdenciária</p>
+      <p class="fit-card-answer">Formação contínua em Direito do Trabalho, Reforma Trabalhista, eSocial, NR-1, FGTS Digital, DCTFWEB, Nova DIRF e PCMSO. Participei do Congresso de Atualização DP e eSocial 2026.</p>
+      <span class="fit-check">Atualizada para 2026</span>
+    </div>
+    <div class="fit-card" data-icon="📊">
+      <p class="fit-card-req">eSocial (S-2200, S-2230, S-2299, S-1200, S-1210)</p>
+      <p class="fit-card-answer">Experiência com consulta, lançamento e acompanhamento de eventos eSocial nas rotinas de admissão, desligamento, afastamentos e folha. Formação específica no Congresso DP e eSocial da EB Educação (8h).</p>
+      <span class="fit-check">Diferencial confirmado</span>
+    </div>
+    <div class="fit-card" data-icon="🧮">
+      <p class="fit-card-req">Cálculos de rescisão e encargos</p>
+      <p class="fit-card-answer">Realizei cálculos de rescisões, prévias e encargos no TOTVS e PROTHEUS. Cursos específicos: Cálculos Trabalhistas (Veritas/Perita Judicial, 6h) e Especialista em DP: Legislação, Processos e Governo Digital.</p>
+      <span class="fit-check">Aderência total</span>
+    </div>
+    <div class="fit-card" data-icon="👥">
+      <p class="fit-card-req">Orientar auxiliares, assistentes e analistas jr</p>
+      <p class="fit-card-answer">Já gerenciei sozinha múltiplas filiais e rotinas de equipe. Hoje na MBRF atuo com suporte às unidades, verificando prazos de entrega e acompanhando a gestão de benefícios com autonomia e visão de processo.</p>
+      <span class="fit-check">Experiência comprovada</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETÊNCIAS TÉCNICAS -->
+<section class="skills-section" id="competencias">
+  <div class="reveal" style="margin-bottom: 3rem;">
+    <p class="section-label">Competências técnicas</p>
+    <h2 class="section-title">Domínio técnico construído<br>na prática e na formação</h2>
+  </div>
+  <div class="skills-grid reveal">
+    <div class="skill-block">
+      <div class="skill-icon">⚙</div>
+      <p class="skill-block-title">Sistemas & Plataformas</p>
+      <div class="skill-tags">
+        <span class="tag highlight">SAP HCM / S4HANA</span>
+        <span class="tag highlight">TOTVS PROTHEUS</span>
+        <span class="tag highlight">Rhevolution</span>
+        <span class="tag">SGP</span>
+        <span class="tag">Chronos</span>
+        <span class="tag">Secullum</span>
+        <span class="tag">SOC</span>
+        <span class="tag">Escalasoft</span>
+        <span class="tag">Sólides</span>
+        <span class="tag">Mercado Eletrônico</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">📑</div>
+      <p class="skill-block-title">Rotinas de DP & Folha</p>
+      <div class="skill-tags">
+        <span class="tag highlight">Folha de Pagamento</span>
+        <span class="tag highlight">eSocial</span>
+        <span class="tag highlight">Rescisões & Cálculos</span>
+        <span class="tag">Benefícios</span>
+        <span class="tag">Férias</span>
+        <span class="tag">FGTS Digital</span>
+        <span class="tag">DCTFWEB</span>
+        <span class="tag">Nova DIRF</span>
+        <span class="tag">PCMSO / PGR</span>
+        <span class="tag">CIPA / NR-1</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">📊</div>
+      <p class="skill-block-title">Dados & Análise</p>
+      <div class="skill-tags">
+        <span class="tag highlight">Excel Avançado</span>
+        <span class="tag highlight">Power Query</span>
+        <span class="tag highlight">Power BI</span>
+        <span class="tag">VBA / Automações</span>
+        <span class="tag">Python (básico)</span>
+        <span class="tag">SAP Analytics</span>
+        <span class="tag">Relatórios BI</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">🤖</div>
+      <p class="skill-block-title">Inteligência Artificial</p>
+      <div class="skill-tags">
+        <span class="tag highlight">IA Generativa em RH</span>
+        <span class="tag">IA Aplicada à SST (USP)</span>
+        <span class="tag">Machine Learning Python (USP/MBX)</span>
+        <span class="tag">ESG & IA (USP/MBX)</span>
+        <span class="tag">Power BI + IA (Microsoft MVP)</span>
+        <span class="tag">Formação IA – Escola de Líderes</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">⚖</div>
+      <p class="skill-block-title">Legislação & Compliance</p>
+      <div class="skill-tags">
+        <span class="tag highlight">Reforma Trabalhista</span>
+        <span class="tag highlight">Direito do Trabalho</span>
+        <span class="tag">Licitações e Contratos</span>
+        <span class="tag">LGPD</span>
+        <span class="tag">SST / NR-1/5/18/33/35</span>
+        <span class="tag">ESG – Agenda Global</span>
+        <span class="tag">Perícias Trabalhistas</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">🌐</div>
+      <p class="skill-block-title">Gestão & Soft Skills</p>
+      <div class="skill-tags">
+        <span class="tag highlight">Gestão por Processos (FGV)</span>
+        <span class="tag highlight">Inglês Avançado</span>
+        <span class="tag">Analista DISC</span>
+        <span class="tag">Analista Comportamental</span>
+        <span class="tag">Business Partner (EBX)</span>
+        <span class="tag">Liderança Data-Driven</span>
+        <span class="tag">Libras (básico)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section class="exp-section" id="experiencia">
+  <div class="reveal" style="margin-bottom: 4rem;">
+    <p class="section-label">Trajetória profissional</p>
+    <h2 class="section-title">8 anos construindo RH<br>estratégico e operacional</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="exp-item reveal">
+      <div class="exp-date">
+        Set 2025 – Atual
+        <span class="exp-current">▶ Atual</span>
+      </div>
+      <div class="exp-content">
+        <p class="exp-company">MBRF — Marfrig + BRF</p>
+        <p class="exp-role">Analista de RH Júnior — Benefícios · CSC Global · Itajaí/SC</p>
+        <p class="exp-desc">
+          Atuação no Centro de Serviços Compartilhados Global. Gestão dos benefícios Marfrig: Saúde (SulAmérica, Hapvida, Promed, Intermédica, Unimed, Bradesco), BB Odonto, BB Seguro de Vida, VT (Pluxee), VA e VR (Alelo), Frotas (Veloe Go), Gympass/Wellhub, Fretado (Vesper) e Farmácia. Envio de relatórios para auditoria, conferência de faturas e interface com folha para descontos. Uso de Excel (VBA) para análises. Suporte às unidades verificando prazos de entrega e acompanhando a gestão de benefícios. Sistemas: TOTVS Protheus, Rhevolution, Mercado Eletrônico.
+        </p>
+        <div class="exp-highlights">
+          <span class="exp-highlight">Fusão Estratégica</span>
+          <span class="exp-highlight">CSC Global</span>
+          <span class="exp-highlight">TOTVS Protheus</span>
+          <span class="exp-highlight">Auditoria de Benefícios</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date">Abr 2024 – Set 2025</div>
+      <div class="exp-content">
+        <p class="exp-company">Michelson Strong Store</p>
+        <p class="exp-role">Analista de RH Pleno — Generalista · Dealer Heli Brasil</p>
+        <p class="exp-desc">
+          Estruturação completa do setor de RH do zero para 4 unidades (matriz + 2 PR + 1 RS). Responsável por todo o ciclo: admissão, folha, benefícios, ponto, desligamentos, CIPA, treinamentos NR, T&D, cargos e salários. Conduziu abertura de nova filial no RS: aquisição de empresa, contratação, sindicato, alvará e CNPJ. Implantação de políticas, fluxos e cultura organizacional.
+        </p>
+        <div class="exp-highlights">
+          <span class="exp-highlight">RH do Zero</span>
+          <span class="exp-highlight">4 Unidades</span>
+          <span class="exp-highlight">Abertura de Filial</span>
+          <span class="exp-highlight">Folha de Pagamento</span>
+          <span class="exp-highlight">T&D / CIPA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date">Nov 2022 – Mar 2024</div>
+      <div class="exp-content">
+        <p class="exp-company">Moraes Serviços Logísticos</p>
+        <p class="exp-role">Assistente de RH/DP Sênior</p>
+        <p class="exp-desc">
+          DP e RH completo para filiais em Recife/PE, Gravataí/RS, Itajaí e Navegantes/SC. Folha de pagamento no SGP, Chronos e Secullum, controle de ponto, admissões, rescisões, férias, benefícios, ASO, PCMSO, PPRA, EPI, endomarketing e pesquisa de clima.
+        </p>
+        <div class="exp-highlights">
+          <span class="exp-highlight">SGP / Chronos / Secullum</span>
+          <span class="exp-highlight">Múltiplas filiais</span>
+          <span class="exp-highlight">PCMSO / PPRA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date">2018 – Out 2022</div>
+      <div class="exp-content">
+        <p class="exp-company">Indústria e Comércio Leal</p>
+        <p class="exp-role">Auxiliar / Assistente de RH</p>
+        <p class="exp-desc">
+          Base sólida em recrutamento, admissões, TOTVS/PROTHEUS, eSocial, controle de ponto DIMEP, homologações sindicais, secretaria da CIPA e rotinas administrativas completas de RH.
+        </p>
+        <div class="exp-highlights">
+          <span class="exp-highlight">TOTVS PROTHEUS</span>
+          <span class="exp-highlight">eSocial</span>
+          <span class="exp-highlight">CIPA</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICAÇÕES -->
+<section class="certs-section" id="certificacoes">
+  <div class="reveal" style="margin-bottom: 3rem;">
+    <p class="section-label">Formação continuada</p>
+    <h2 class="section-title">Aprendizado contínuo<br>com profundidade e propósito</h2>
+  </div>
+  <div class="certs-grid reveal">
+
+    <div class="cert-card">
+      <p class="cert-inst">USP / MBX</p>
+      <p class="cert-name">Liderança de Alta Performance: Pessoas, Estratégia e Gestão</p>
+      <p class="cert-year">2026 · Nota máxima 10,0</p>
+      <span class="cert-badge">USP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">USP / MBX</p>
+      <p class="cert-name">Inteligência Artificial Aplicada à Saúde e Segurança do Trabalho</p>
+      <p class="cert-year">2025</p>
+      <span class="cert-badge">USP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">USP / MBX</p>
+      <p class="cert-name">Machine Learning com Python (IMLP)</p>
+      <p class="cert-year">2025 · Nota máxima 10,0</p>
+      <span class="cert-badge">USP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">USP / MBX</p>
+      <p class="cert-name">Temas Materiais em ESG: Conceito, Aplicação e Casos Práticos</p>
+      <p class="cert-year">2025 · Nota máxima 10,0</p>
+      <span class="cert-badge">USP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">USP / FEAUSP</p>
+      <p class="cert-name">Fundamentos de IA Generativa em Marketing</p>
+      <p class="cert-year">2025</p>
+      <span class="cert-badge">USP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">EB Educação</p>
+      <p class="cert-name">Congresso: Atualização DP e eSocial — Nova DIRF 2026</p>
+      <p class="cert-year">Dez 2025 · 8 horas</p>
+      <span class="cert-badge">DP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">BSSP Centro Educacional</p>
+      <p class="cert-name">Webinar Atualidades Trabalhistas para 2026</p>
+      <p class="cert-year">2026 · Pós-Graduação</p>
+      <span class="cert-badge">2026</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Escola Mineira de Humanidades</p>
+      <p class="cert-name">1º Congresso Brasileiro de Gestão de Pessoas e Cultura Organizacional</p>
+      <p class="cert-year">Nov 2025 · 12 horas-aula</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">FGV Online</p>
+      <p class="cert-name">Fundamentos da Gestão por Processos</p>
+      <p class="cert-year">Set 2025 · 14 horas</p>
+      <span class="cert-badge">FGV</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Udemy (Curso Completo)</p>
+      <p class="cert-name">SAP + Acesso Vitalício ao Servidor SAP</p>
+      <p class="cert-year">Set 2025 · 5,5 horas</p>
+      <span class="cert-badge">SAP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Microsoft MVP — Karine Lago & Letícia Smirelli</p>
+      <p class="cert-name">Imersão Power BI na Era da Inteligência Artificial</p>
+      <p class="cert-year">Out 2025 · 8 horas</p>
+      <span class="cert-badge">Power BI</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Hashtag Treinamentos</p>
+      <p class="cert-name">Jornada Python</p>
+      <p class="cert-year">Set 2025 · 8 horas</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">EB Educação</p>
+      <p class="cert-name">Maratona Especialista em DP: Legislação, Processos e Governo Digital</p>
+      <p class="cert-year">Set 2025 · 12 horas</p>
+      <span class="cert-badge">DP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Veritas — Perita Judicial</p>
+      <p class="cert-name">Curso sobre Cálculos Trabalhistas</p>
+      <p class="cert-year">Set/Out 2025 · 6 horas</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Escola Mineira de Direito (EMD)</p>
+      <p class="cert-name">16º Congresso Brasileiro de Licitações e Contratos</p>
+      <p class="cert-year">Out 2025 · 16 horas</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">EMD / Escola Mineira de Direito</p>
+      <p class="cert-name">3º Congresso de Perícias e Auditorias Trabalhistas</p>
+      <p class="cert-year">Set 2025 · 12 horas</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Ensina DP</p>
+      <p class="cert-name">Intensivão de Atualizações Trabalhistas (FGTS Digital, eSocial SST, NR-01, DIRF)</p>
+      <p class="cert-year">Set 2025 · 12 horas</p>
+      <span class="cert-badge">DP</span>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Escola Mineira de Gestão</p>
+      <p class="cert-name">1º Congresso Brasileiro de DP na Era Digital</p>
+      <p class="cert-year">Ago 2025 · 12 horas</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Universidad Nacional de Córdoba</p>
+      <p class="cert-name">Gestão de Pessoas: Recursos Humanos (UNCordobaX)</p>
+      <p class="cert-year">2024</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Universitat Politècnica de València</p>
+      <p class="cert-name">Avaliação de Valores: Identificação de Talento e Cultura Organizacional</p>
+      <p class="cert-year">2024</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Udemy</p>
+      <p class="cert-name">Especialista em Departamento Pessoal / Formação Analista de RH</p>
+      <p class="cert-year">2024</p>
+    </div>
+    <div class="cert-card">
+      <p class="cert-inst">Udemy</p>
+      <p class="cert-name">Microsoft Power BI para Profissionais de RH / Diploma em HRM</p>
+      <p class="cert-year">2024</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="diff-section">
+  <div class="reveal">
+    <p class="section-label">Por que eu</p>
+    <h2 class="section-title">Diferenciais que me<br>tornam a candidata ideal</h2>
+  </div>
+  <div class="diff-grid reveal">
+    <div class="diff-item">
+      <div class="diff-num">01</div>
+      <div class="diff-content">
+        <p class="diff-title">Já faço parte do ecossistema MBRF</p>
+        <p class="diff-text">Atuo com foco na Marfrig com os sistemas TOTVS Protheus e Rhevolution. Perfil resiliente e produtivo, receptiva a novos aprendizados e melhoria contínua — organizo meu trabalho com backlog pessoal, sprints e fluxo estruturado, com embasamento na cultura lean e nos pilares do design thinking: empatia, colaboração e experimentação.</p>
+      </div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-num">02</div>
+      <div class="diff-content">
+        <p class="diff-title">Visão estratégica + execução operacional</p>
+        <p class="diff-text">Fui autora de 3 e-books de RH publicados na Amazon. Penso RH de forma sistêmica: construí do zero, liderei múltiplas filiais e agora atuo em contexto multinacional de alta complexidade.</p>
+      </div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-num">03</div>
+      <div class="diff-content">
+        <p class="diff-title">IA e dados aplicados ao RH</p>
+        <p class="diff-text">Certificada em Machine Learning com Python, Power BI + IA (Microsoft MVP) e IA Generativa em Marketing (FEAUSP). Uso automações em VBA e análises BI para suportar decisões — diferencial crescente em RH moderno.</p>
+      </div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-num">04</div>
+      <div class="diff-content">
+        <p class="diff-title">Atualização técnica permanente</p>
+        <p class="diff-text">Participante ativa de congressos, maratonas e cursos em 2025/2026: eSocial, Nova DIRF, FGTS Digital, NR-1, Licitações, Cálculos Trabalhistas, ESG e Sustentabilidade — sempre um passo à frente das mudanças legais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section style="padding: 3rem 4rem; background: var(--dark); border-top: 1px solid rgba(201,168,76,0.08);">
+  <div style="display:flex; gap:3rem; flex-wrap:wrap; align-items:flex-start; justify-content:center;">
+    <div style="display:flex; align-items:flex-start; gap:1rem;">
+      <div style="width:1px; height:3rem; background:rgba(201,168,76,0.3); flex-shrink:0; margin-top:4px;"></div>
+      <div>
+        <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.4rem;">Associações profissionais</p>
+        <p style="font-size:0.88rem; color:rgba(253,250,244,0.75); line-height:1.6;">ABRH Itajaí – SC &nbsp;·&nbsp; AAPSA – Associação Brasileira de Recursos Humanos</p>
+      </div>
+    </div>
+    <div style="display:flex; align-items:flex-start; gap:1rem;">
+      <div style="width:1px; height:3rem; background:rgba(201,168,76,0.3); flex-shrink:0; margin-top:4px;"></div>
+      <div>
+        <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.4rem;">Voluntariado</p>
+        <p style="font-size:0.88rem; color:rgba(253,250,244,0.75); line-height:1.6;">CVV – Centro de Valorização da Vida</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contato">
+  <div class="reveal">
+    <p class="section-label" style="text-align:center">Pronta para o próximo desafio</p>
+    <h2 class="contact-title">Vamos <em>conversar</em>?</h2>
+    <p style="font-size:0.9rem; color:rgba(253,250,244,0.5); margin-top:0.5rem;">Candidatura interna — Analista de RH Pleno (Folha de Pagamento) · BRF · Itajaí/SC</p>
+  </div>
+  <div class="contact-links reveal">
+    <a href="https://www.linkedin.com/in/samanthapatricio" class="contact-link">
+      <span class="contact-link-label">LinkedIn</span>
+      <span class="contact-link-val">linkedin.com/in/samanthapatricio</span>
+    </a>
+    <a href="mailto:samantha.patricio56@outlook.com" class="contact-link">
+      <span class="contact-link-label">E-mail</span>
+      <span class="contact-link-val">samantha.patricio56@outlook.com</span>
+    </a>
+    <a href="https://wa.me/5547988202394" class="contact-link">
+      <span class="contact-link-label">WhatsApp</span>
+      <span class="contact-link-val">(47) 98820-2394</span>
+    </a>
+    <a href="https://linkme.bio/rhsamanthapatricio" class="contact-link">
+      <span class="contact-link-label">Portfólio Completo</span>
+      <span class="contact-link-val">linkme.bio/rhsamanthapatricio</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  Samantha Patrício da Silva · Analista de RH · Navegantes – SC · 2026
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
