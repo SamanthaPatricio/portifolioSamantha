@@ -1,0 +1,93 @@
+[
+  {
+    "id": "rh50",
+    "asin": "B0FNLW2891",
+    "title": "RH 5.0",
+    "subtitle": "IA Generativa, Gestão por Habilidades e Conformidade no Brasil",
+    "category": "IA & gestão",
+    "filter": "gestao",
+    "width": 313,
+    "height": 500,
+    "description": "Inteligência artificial generativa, gestão por habilidades e conformidade se encontram nesta obra sobre as transformações do RH. Uma leitura para ampliar o repertório sobre tecnologia e gestão de pessoas no contexto brasileiro.",
+    "topics": [
+      "Inteligência artificial generativa",
+      "Gestão por habilidades",
+      "Contexto brasileiro"
+    ],
+    "cover": "assets/books/B0FNLW2891.jpg",
+    "url": "https://www.amazon.com.br/dp/B0FNLW2891"
+  },
+  {
+    "id": "rh-estrategico",
+    "asin": "B0FBY5S5YW",
+    "title": "Como Implementar um Setor de RH Estratégico",
+    "subtitle": "Guia prático",
+    "category": "Estruturação de RH",
+    "filter": "gestao",
+    "width": 311,
+    "height": 466,
+    "description": "Um guia voltado à construção de um setor de Recursos Humanos com visão estratégica. A obra aproxima implementação e gestão de pessoas, tema central da minha experiência profissional.",
+    "topics": [
+      "Implementação de RH",
+      "Visão estratégica",
+      "Organização da área"
+    ],
+    "cover": "assets/books/B0FBY5S5YW.jpg",
+    "url": "https://www.amazon.com.br/dp/B0FBY5S5YW"
+  },
+  {
+    "id": "circulo",
+    "asin": "B0FDJN7TSQ",
+    "title": "Metodologia C.I.R.C.U.L.O.",
+    "subtitle": "Sete dimensões de desenvolvimento",
+    "category": "Liderança & pessoas",
+    "filter": "pessoas",
+    "width": 279,
+    "height": 445,
+    "description": "Uma proposta que reúne sete dimensões para pensar consciência, liderança, colaboração e desenvolvimento humano. A metodologia conecta a forma como nos organizamos à maneira como nos relacionamos e influenciamos o ambiente.",
+    "topics": [
+      "Consciência de si e do outro",
+      "Liderança e colaboração",
+      "Resiliência e desenvolvimento"
+    ],
+    "cover": "assets/books/B0FDJN7TSQ.jpg",
+    "url": "https://www.amazon.com.br/dp/B0FDJN7TSQ"
+  },
+  {
+    "id": "arquitetura-cultural",
+    "asin": "B0FN9F9RCR",
+    "title": "Arquitetura Cultural",
+    "subtitle": "Como espaço físico molda cultura e performance",
+    "category": "Arquitetura & cultura",
+    "filter": "cultura",
+    "width": 354,
+    "height": 500,
+    "description": "Uma aproximação entre arquitetura e gestão de pessoas, explorando a relação entre espaço físico, cultura e performance. Um convite a observar o ambiente como parte da experiência de trabalho.",
+    "topics": [
+      "Espaço físico",
+      "Cultura organizacional",
+      "Experiência no trabalho"
+    ],
+    "printAsin": "B0FNDMXXXG",
+    "cover": "assets/books/B0FN9F9RCR.jpg",
+    "url": "https://www.amazon.com.br/dp/B0FN9F9RCR"
+  },
+  {
+    "id": "indisciplinadamente-humano",
+    "asin": "B0G6XVVKZC",
+    "title": "Indisciplinadamente Humano",
+    "subtitle": "A revolução de ser real em um mundo que cobra performance",
+    "category": "Comportamento & reflexão",
+    "filter": "pessoas",
+    "width": 354,
+    "height": 500,
+    "description": "Uma reflexão sobre autenticidade e as exigências de performance. A obra abre espaço para questionar expectativas e olhar para a experiência humana para além da cobrança por resultados.",
+    "topics": [
+      "Autenticidade",
+      "Exigências de performance",
+      "Experiência humana"
+    ],
+    "cover": "assets/books/B0G6XVVKZC.jpg",
+    "url": "https://www.amazon.com.br/dp/B0G6XVVKZC"
+  }
+]
